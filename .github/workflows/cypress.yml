@@ -28,13 +28,11 @@ jobs:
           # we have already installed all dependencies above
           install: false
           record: false
-          group: https://seltzerpr.wpengine.com
           working-directory: ./ui-tests
           # Wrap cypress inside of a percy run
           command-prefix: 'percy exec --verbose --'
         env:
           TZ: America/Los_Angeles
-          CI: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CYPRESS_BASE_URL: https://seltzerpr.wpengine.com
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
