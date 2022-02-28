@@ -1,0 +1,80 @@
+version: 2
+snapshot:
+  widths:
+    - 1200
+    - 375
+  minHeight: 1024
+  enableJavaScript: true
+  percyCSS: |
+    .hide-in-percy {
+      visibility: hidden;
+    }
+
+    /* Featured Listings Block */
+    .cover-element__image, .featured-listing__address, .featured-listing__price, .featured-listing__title {
+      visibility: hidden;
+    }
+
+    /* Active Listings Block */
+    .listing-card__meta, .listing-card__image, .num-of-results, .pagination li {
+      visibility: hidden;
+    }
+
+    /* Map Block */
+    .map {
+      visibility: hidden;
+    }
+
+    /* Search Page */
+    .vue-map-container {
+      visibility: hidden;
+    }
+    #hj-app .list-column .item {
+      visibility: hidden;
+    }
+    #hj-app .search-count {
+      visibility: hidden;
+    }
+    #hj-app .last-updated {
+      visibility: hidden;
+    }
+    /* Hide privacy toast because of https://github.com/Robdel12/scroll-to-bottom/issues/11 */
+    .privacy-toast {
+      visibility: hidden;
+    }
+    .listing-cover__gallery-item img {
+      visibility: hidden;
+    }
+    .listing-cover__address {
+      visibility: hidden;
+    }
+    .listing-cover__price {
+      visibility: hidden;
+    }
+    .listing-cover__stat figcaption {
+      visibility: hidden;
+    }
+    .listing-cover__idx-compliance {
+      visibility: hidden;
+    }
+    .hji-search-result-page .section.property-description {
+      visibility: hidden;
+    }
+    .hji-search-result-page .section .property-details {
+      visibility: hidden;
+    }
+    .hji-search-result-page .section .mortgageCalculator{
+      visibility: hidden;
+    }
+discovery:
+  allowedHostnames: [
+    'cdn.jsdelivr.net',    # Slick is hosted here.
+    'cdnjs.cloudflare.com' # Underscore and Backbone are hosted here.
+  ]
+  networkIdleTimeout: 100
+static:
+  cleanUrls: false
+upload:
+  files: "**/*.{png,jpg,jpeg,webp}"
+  ignore: ""
+  stripExtensions: false
